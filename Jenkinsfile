@@ -6,7 +6,7 @@ pipeline {
                 sh 'pwd'
               
                 echo workspace
-                sh 'xcodebuild clean -workspace EasyApp.xcworkspace -scheme EasyApp'
+               //sh 'xcodebuild clean -workspace EasyApp.xcworkspace -scheme EasyApp'
                
                 sh 'pwd'
             }
