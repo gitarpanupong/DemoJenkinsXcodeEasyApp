@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('---clean---') {
+      /*  stage('---clean---') {
             steps {
                 sh 'pwd'
               
@@ -18,6 +18,12 @@ pipeline {
                 //sh 'xcodebuild -scheme "EasyApp" -workspace EasyApp.xcworkspace/ build -allowProvisioningUpdates'
                 sh 'pwd'
                 //sh 'xcodebuild -list -workspace EasyApp.xcworkspace'
+            }
+        }*/
+        stage('---fastlane---'){
+            steps{
+           //   sh'fastlane init'
+              sh 'fastlane gym --workspace "EasyApp.xcworkspace" --scheme "EasyApp" --clean'
             }
         }
     }
